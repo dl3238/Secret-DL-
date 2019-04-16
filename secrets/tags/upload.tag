@@ -86,18 +86,18 @@
 
    };
 
-   // mySecrets() {
-   //   database.collection(user.currentUser.uid).orderBy('timestamp','asc')
-   //   .startAfter(this.lastTimestamp).limit(3).get().then(snapshot => {
-   //     this.items = [];
-   //     snapshot.forEach(doc => {
-   //       this.items.push(doc.data());
-   //     });
-   //
-   //     this.lastTimestamp = this.items[this.items.length - 1].timestamp;
-   //     this.update();
-   //   });
-   // }
+   mySecrets() {
+     database.collection(user.currentUser.uid).orderBy('timestamp','asc')
+     .startAfter(this.lastTimestamp).limit(3).get().then(snapshot => {
+       this.items = [];
+       snapshot.forEach(doc => {
+         this.items.push(doc.data());
+       });
+
+       this.lastTimestamp = this.items[this.items.length - 1].timestamp;
+       this.update();
+     });
+   }
 
    // this.on('update', () => {
    // 	this.user = opts.user;

@@ -10,8 +10,28 @@
       <button type="button" name="button" class="btn btn-primary" onclick={ postSecret }>Submit</button>
     </form>
   </div>
+  <div class="d-flex justify-content-center feed text-center">
+    <div class="row text-center">
+      <div class="text-center">
+        <img class="rounded d-block mx-auto" style="width:80%; height:100%;" src="https://images.unsplash.com/photo-1483706600674-e0c87d3fe85b?ixlib=rb-1.2.1&auto=format&fit=crop&w=782&q=80" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center feed text-center">
+    <div class="row text-center">
+      <div class="text-center">
+        <img class="rounded d-block mx-auto" style="width:80%; height:100%;" src="https://images.unsplash.com/photo-1483706600674-e0c87d3fe85b?ixlib=rb-1.2.1&auto=format&fit=crop&w=782&q=80" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center feed text-center">
+    <div class="row text-center">
+      <div class="text-center">
+        <img class="rounded d-block mx-auto" style="width:80%; height:100%;" src="https://images.unsplash.com/photo-1483706600674-e0c87d3fe85b?ixlib=rb-1.2.1&auto=format&fit=crop&w=782&q=80" alt="">
+      </div>
+    </div>
+  </div>
 
-  <!-- <button type="button" name="button" class="btn btn-primary">My Secrets</button> -->
   <div show={ user } class="container" style="margin-top:50px;">
     <feed each={ item, i in secrets }></feed>
   </div>
@@ -57,9 +77,15 @@
         timestamp:firebase.firestore.FieldValue.serverTimestamp(),
         id:secretKey,
       })
+    };
 
-
-    }
+    //  this.posts =[];
+    // debugger
+    // observable.on('data', feed => {
+    //   debugger
+    //  this.posts = feed;
+    //  debugger
+    // });
 
 
 
@@ -76,6 +102,9 @@
     }
     .form {
       padding: 5px;
+    }
+    .feed {
+      margin-top: 30px;
     }
   </style>
 </upload1>
